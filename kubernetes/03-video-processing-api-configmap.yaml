@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: video-processing-api-configmap
+  namespace: fiap
+data:
+  PORT: "3000"
+  ENV: local
+  POSTGRES_DATABASE: video-processing
+  POSTGRES_HOST: svc-db-video-processing
+  POSTGRES_PORT: "5432"

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: video-processing-api-deployment
+  namespace: fiap
+spec:
+  selector:
+    matchLabels:
+      app: video-processing-api
+  template:
+    metadata:
+      labels:
+        app: video-processing-api
+    spec:
+      containers:
+        - name: video-processing-api-container
+          image: gabrielumbelino/fiap-hackathon-video-processing-api-core:latest
+          # image: k8s.gcr.io/e2e-test-images/echoserver:2.5
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: video-processing-api-configmap
+            - secretRef:
+                name: db-secret
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 256Mi
+              cpu: 100m
