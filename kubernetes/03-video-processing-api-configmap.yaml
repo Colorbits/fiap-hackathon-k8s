@@ -9,6 +9,6 @@ data:
   POSTGRES_DATABASE: video-processing
   POSTGRES_HOST: svc-db-video-processing
   POSTGRES_PORT: "5432"
-  FPS: 2
+  FPS: "2"
   IMAGE_UPLOAD_SERVICE_URL: "http://svc-image-upload-api:8081"  # Aqui está a alteração
   NOTIFICATION_SERVICE_URL: "http://svc-notification-api:8082"  # Também ajuste este se necessário
