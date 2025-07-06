@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-upload-api-deployment
+  namespace: fiap
+spec:
+  selector:
+    matchLabels:
+      app: image-upload-api
+  template:
+    metadata:
+      labels:
+        app: image-upload-api
+    spec:
+      containers:
+        - name: image-upload-api-container
+          image: gabrielumbelino/fiap-hackathon-image-upload-service:latest
+          ports:
+            - name: http
+              containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: image-upload-api-configmap
+            - secretRef:
+                name: db-secret
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 256Mi
+              cpu: 100m

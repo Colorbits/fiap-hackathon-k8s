@@ -15,7 +15,6 @@ spec:
       containers:
         - name: video-processing-api-container
           image: gabrielumbelino/fiap-hackathon-video-processing-api-core:latest
-          # image: k8s.gcr.io/e2e-test-images/echoserver:2.5
           ports:
             - name: http
               containerPort: 8080
@@ -26,8 +25,8 @@ spec:
                 name: db-secret
           resources:
             requests:
-              memory: 256Mi
-              cpu: 100m
+              memory: 512Mi
+              cpu: 200m
             limits:
-              memory: 256Mi
-              cpu: 100m
+              memory: 512Mi
+              cpu: 200m

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-image-upload-api
+  namespace: fiap
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8081
+      targetPort: 3001
+  selector:
+    app: image-upload-api

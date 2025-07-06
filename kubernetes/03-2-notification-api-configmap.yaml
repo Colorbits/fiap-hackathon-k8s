@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notification-api-configmap
+  namespace: fiap
+data:
+  PORT: "3002"
+  DATABASE_URL: "mongodb+srv://gallon5867:uzBCNWg4inDqQmw9@notification-service-cl.gf14b60.mongodb.net/notification-service-cluster?retryWrites=true&w=majority&appName=notification-service-cluster"
+  SMTP_HOST: "sandbox.smtp.mailtrap.io"
+  SMTP_PORT: "587"
+  SMTP_USER: "22019a356a7fee"
+  SMTP_PASSWORD: "cad581b6db06ab"
+  EMAIL_FROM: "from@example.com"
