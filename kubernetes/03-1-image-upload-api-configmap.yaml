@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: image-upload-api-configmap
-  namespace: fiap
-data:
-  PORT: "3001"
-  DATABASE_URL: "mongodb+srv://consult5274:73vTU3gqYoC2Y@fiap-hackathon-image-up.bwur4fd.mongodb.net/fiap-hackathon-image-upload-db?retryWrites=true&w=majority&appName=fiap-hackathon-image-upload-db"
-

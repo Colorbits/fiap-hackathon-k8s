@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-configmap-notification
+  namespace: fiap
+data:
+  POSTGRES_DB: notification

@@ -85,7 +85,7 @@ resource "helm_release" "cluster_autoscaler" {
   # MUST be updated to match your region 
   set {
     name  = "awsRegion"
-    value = "us-east-1"
+    value = "us-east-2"
   }
 
   depends_on = [helm_release.metrics_server]
