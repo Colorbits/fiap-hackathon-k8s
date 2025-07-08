@@ -5,3 +5,4 @@ metadata:
   namespace: fiap
 data:
   POSTGRES_DB: image-upload
+  POSTGRES_INITDB_ARGS: "--data-checksums"

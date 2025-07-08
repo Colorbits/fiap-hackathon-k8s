@@ -5,3 +5,4 @@ metadata:
   namespace: fiap
 data:
   POSTGRES_DB: notification
+  POSTGRES_INITDB_ARGS: "--data-checksums"
