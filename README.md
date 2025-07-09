@@ -37,6 +37,7 @@ eksFullAccess:
     ]
 }
 
+
 AmazonEC2ContainerRegistryReadOnly
 AmazonEC2FullAccess
 AmazonEKSClusterPolicy
