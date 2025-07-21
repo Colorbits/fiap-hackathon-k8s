@@ -10,8 +10,6 @@ O projeto é composto por três serviços principais executando em um cluster Ku
 2. **Image Upload Service** - Serviço para upload e gerenciamento de frames de vídeo
 3. **Notification Service** - Serviço para envio de notificações aos usuários
 
-![Diagrama da Arquitetura](./docs/architecture.png)
-
 ## Estrutura do Repositório
 
 ```
